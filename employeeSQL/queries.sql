@@ -1,4 +1,3 @@
-drop table salaries;
 -- creating a staff title table
 CREATE TABLE staff_title (title_id VARCHAR(7) NOT NULL PRIMARY KEY,
 							title  VARCHAR(30)
@@ -131,4 +130,19 @@ FROM employees
 GROUP BY  last_name
 HAVING COUNT(DISTINCT first_name) > 0
 ORDER BY COUNT(last_name) DESC;
+
+-- I am creating a Table view for the bonus exercise
+CREATE VIEW employees_info AS
+SELECT e.emp_no, 
+	e.last_name, 
+	e.first_name, 
+	e.sex, 
+	sf.title,
+	s.salary
+	FROM employees e
+	INNER JOIN salaries s ON (s.emp_no=e.emp_no)
+	INNER JOIN staff_title sf ON (sf.title_id=e.emp_title_id); 
+-- Showing the employee_details view
+SELECT * FROM employees_info
+
 
