@@ -22,7 +22,8 @@ CREATE TABLE "department_manager" (
 
 CREATE TABLE "salaries" (
   "emp_no" INT PRIMARY KEY,
-  "salary" FLOAT(25)
+  "salary" FLOAT(25),
+  "id" PRIMARY KEY
 );
 
 CREATE TABLE "staff_title" (
