@@ -15,7 +15,7 @@ Note: in the code to save the bar plot the filepath used is :
 ```python
 plt.savefig('output\\average_salary.png')
 ```
-I believe this syntax works only on windows machines, if you are running the code on an apple device you will probably need to remove one of the two \.
+I believe this syntax works only on windows machines, if you are running the code on an apple device you will probably need to remove one of the two backslash.
 
 The end of the assignment made me laugh:
 ```python
